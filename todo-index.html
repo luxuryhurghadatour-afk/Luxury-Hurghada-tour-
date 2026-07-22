@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق قائمة المهام</title>
+    <link rel="stylesheet" href="todo-styles.css">
+</head>
+<body dir="rtl">
+    <div class="container">
+        <div class="todo-card">
+            <h1>📋 قائمة المهام</h1>
+            
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    class="task-input" 
+                    placeholder="أضف مهمة جديدة..."
+                    autocomplete="off"
+                >
+                <button id="add-btn" class="btn btn-add">إضافة</button>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="active">قيد التنفيذ</button>
+                <button class="filter-btn" data-filter="completed">مكتملة</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">إجمالي:</span>
+                    <span id="total-count" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">مكتملة:</span>
+                    <span id="completed-count" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">المتبقية:</span>
+                    <span id="remaining-count" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <div class="action-buttons">
+                <button id="clear-completed-btn" class="btn btn-secondary">حذف المكتملة</button>
+                <button id="clear-all-btn" class="btn btn-danger">حذف الكل</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
